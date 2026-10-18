@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="inner-header">
+                <a href="#" class="logo">Victu Designs</a>
+                <nav>
+                    <a href="#">about</a>
+                    <a href="#">message</a>
+                    <a href="#">contact now</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section id="hero">
+        <video src="media/bg-video.mp4" autoplay loop muted></video>
+        <div class="hero-content">
+            <span>welcome to my portfolio</span>
+            <h1>Hi my name is <br> Ugochukwu Victor Ogamba
+            </h1>
+            <p>
+                Crafting bold and modern visual designs that help brands stand out with creativity and impact.
+            </p>
+            <div class="buttons">
+                <button>explore project</button>
+                <button>contact now</button>
+            </div>
+        </div>
+        <div class="images">
+            <img src="media/WhatsApp Image 2026-08-30 at 2.10.40 AM (1).jpeg" alt="">
+        </div>
+    </section>
+    <section id="latest-work">
+        <div class="container">
+            <div class="inner-work">
+                <div class="work-head">
+                    <h2 class="title">Latest Work</h2>
+                    <div class="work-head-flex">
+                        <div class="work-btns">
+                            <div class="btn-list graphic-btns active">
+                            <button class="active">All</button>
+                            <button>Logo Design</button>
+                            <button>Banner Set</button>
+                            <button>Illustration</button>
+                            <button>Infographic</button>
+                            <button>Print Design</button>
+                        </div>
+                        <div class="btn-list web-btns">
+                            <button class="active">All</button>
+                            <button>E-Commerce</button>
+                            <button>Landing Page</button>
+                            <button>CMS Web App</button>
+                            <button>Web Application</button>
+                        </div>
+                        </div>
+                        <div class="work-selecter">
+                            <select name="work-list" id="work-list">
+                                <option value="" disabled selected>Select a Skill...</option>
+                                <option value="Graphics Design">Graphics Design</option>
+                                <option value="Web Developmentn">Web Developmentn</option>
+                            </select>
+                            <!-- <input list="work" id="work-list" name="works">
+
+                            <datalist id="work">
+                                <option value="Graphics Design">
+                                <option value="Web Development">
+                            </datalist> -->
+                        </div>
+                        <!-- <div class="work-selecter">
+                            <input list="work" id="work-list" name="works">
+
+                            <datalist id="work">
+                                <option value="Graphics Design">
+                                <option value="Web Development">
+                            </datalist>
+                        </div> -->
+                    </div>
+                </div>
+                <p id="text"></p>
+                <div class="work-body" id="work-body"></div>
+            </div>
+            </div>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

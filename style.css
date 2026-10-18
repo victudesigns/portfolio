@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+  /* Brand Colors */
+  --primary: #0F62FE;          /* Electric Blue (IBM/Tech standard) */
+  --primary-hover: #0149ce;    /* Deep Tech Blue */
+  --accent: #00D5A3;           /* Mint / Neon Teal Highlight */
+  --accent-hover: #00B88D;      /* Darker Teal */
+
+  /* Dark Theme Surface Colors (Ideal for Web Dev Tools) */
+  --bg-main: #0B0F19;          /* Deep Dark Navy */
+  --bg-card: #111827;          /* Card / Sidebar Surface */
+  --border-subtle: #1F2937;    /* Subtle Code Boundary */
+
+  /* Typography Colors */
+  --text-main: #F9FAFB;        /* Crisp White */
+  --text-muted: #9CA3AF;       /* Muted Syntax Gray */
+  --text-dark: #10131b;
+  --text-on-primary: #FFFFFF;  /* High-Contrast Text */
+
+  --transparent: backdrop-filter(blur(14px));
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+button:active {
+    transform: scale(0.94);
+}
+
+header{
+    width: 100%;
+    height: fit-content;
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    transition: all linear .4s;
+}
+
+header.sticky{
+    background: transparent;
+    backdrop-filter: blur(10px);
+    color: var(--text-dark);
+    box-shadow: 2px 2px 3px #0000003b;
+}
+
+.inner-header{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.logo{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.inner-header nav{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.inner-header nav a{
+    position: relative;
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: .8em;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
+.inner-header nav a::after{
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: var(--text-dark);
+    border-radius: 9px;
+    transition: all linear .4s;
+}
+
+.inner-header nav a:hover::after{
+    width: 100%;
+}
+
+#hero{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#hero video{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+}
+
+.hero-content{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 105px;
+    max-width: 590px;
+    z-index: 1;
+}
+
+.images{
+    position: absolute;
+    top: 80%;
+    transform: translateY(-80%);
+    left: 50px;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 10px solid var(--text-on-primary);
+    overflow: hidden;
+    box-shadow: 4px 4px 7px #00000052;
+}
+
+.images img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content span{
+    font-size: 14px;
+    text-transform: capitalize;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.hero-content h1{
+    font-size: 2.6em;
+    color: var(--text-dark);
+    font-weight: 600;
+    line-height: 47px;
+    margin-bottom: 16px;
+}
+
+.hero-content p{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: var(--text-dark);
+    font-weight: 300;
+    /* line-height: 47px */
+    margin-bottom: 20px;
+}
+
+.hero-content .buttons{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hero-content button{
+    border: none;
+    outline: none;
+    padding: 8px 30px;
+    text-transform: capitalize;
+    font-size: .9em;
+    font-weight: 500;
+    border-radius: 40px;
+    cursor: pointer;
+    background: var(--primary);
+    color: var(--text-on-primary);
+    transition: all linear .4s;
+}
+
+.hero-content button:last-child{
+    background: transparent;
+    backdrop-filter: blur(4px);
+    color: var(--text-dark);
+    box-shadow: 2px 2px 3px #0000003b;
+}
+
+.hero-content button:hover{
+    color: var(--text-on-primary);
+    background: var(--primary-hover);
+}
+
+.inner-work {
+    width: 100%;
+    padding: 60px 0;
+}
+
+.work-head .title {
+    font-weight: 500;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.work-head-flex{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn-list {
+    display: none;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-list.active {
+    display: flex;
+}
+
+.btn-list button {
+    padding: 9px 18px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background: var(--bg-main);
+    color: var(--text-main);
+}
+
+.btn-list button:hover {
+    background: var(--accent-hover);
+    color: var(--text-on-primary);
+}
+
+.work-selecter input {
+    padding: 9px 18px;
+    /* border: none; */
+    /* outline: none; */
+    border-radius: 20px;
+    cursor: pointer;
+    /* background: var(--bg-main); */
+    /* color: var(--text-main); */
+}
+
+
+
+.work-body {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 26px;
+  margin-top: 30px;
+}
+
+.work-item {
+  width: 100%;
+  height: fit-content;
+  box-shadow: 1px 1px 10px #0000002a;
+  padding: 10px;
+  border-radius: 6px;
+  transition: all linear 0.3s;
+  cursor: default;
+  background: #fff;
+}
+
+.work-item:hover {
+  transform: translateY(-6px);
+}
+
+.work-item .img {
+  width: 100%;
+  height: 260px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.work-item .img .view {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 37px;
+    height: 37px;
+    font-size: 16px;
+    border-radius: 40%;
+    cursor: pointer;
+}
+
+.work-item .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: all linear 0.4s;
+}
+
+/* .work-item:hover .img img {
+  transform: scale(1.03) rotate(20deg);
+} */
+
+.work-item .work-info span {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 18px;
+}
+
+.work-item .work-info .name {
+  font-size: 15px;
+  color: #470b00;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.work-item .work-info .description {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.work-item .work-info button {
+  padding: 6px 9px;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #470b00;
+  color: #fff;
+}
